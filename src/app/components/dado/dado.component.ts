@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dado',
@@ -7,13 +7,27 @@ import { Component } from '@angular/core';
 })
 
 export class DadoComponent {
-  numero:number=Math.floor(Math.random() * 6) + 1;
-  imagePath: string = '../../../assets/img/Dado1.jpg';
-  constructor() {
-    this.generarNumeroAleatorio();
+  @Input() numero:number=0;
+  imagePath: string = ``;
+  ngOnInit(): void {
+    this.imagePath= `assets/img/Dado${this.numero}.jpg`;
   }
-  generarNumeroAleatorio(){
-    this.numero=Math.floor(Math.random() * 6) + 1;
-    this.imagePath = `assets/img/Dado${this.numero}.jpg`;
-  }
+
+
+
+
+
+
+
+  // numero:number=Math.floor(Math.random() * 6) + 1;
+  // imagePath: string = '../../../assets/img/Dado1.jpg';
+
+  // constructor() {
+  //   this.generarNumeroAleatorio();
+  // }
+  // generarNumeroAleatorio(){
+  //   this.numero=Math.floor(Math.random() * 6) + 1;
+  //   this.imagePath = `assets/img/Dado${this.numero}.jpg`;
+
+  // }
 }

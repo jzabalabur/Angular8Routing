@@ -1,6 +1,9 @@
-<div id="dados">
-  <div id="dado" *ngFor="let repeticion of repeticiones">
-  <app-dado></app-dado>
-  </div>
+<div id="contenedor">
+  <h1>JUEGO DE DADOS</h1>
+  <p>Consigue que los tres dados tengan el mismo valor para ganar.</p>
+
+  <div id="dados">
+      <app-dado *ngFor="let dado of dados" [numero]="dado"></app-dado>    </div>
+  <button (click)="tirarDados()">Tirar dados</button>
+  <h3>{{mensaje}}</h3>
 </div>
-<button (click)="tirarDados()">Tirar dado</button>
