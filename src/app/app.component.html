@@ -21,18 +21,18 @@
             <a class="nav-link" routerLink='/contador'>Contador</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink='/admin'>Admin</a>
+            <a class="nav-link" (click)="accesoAdmin()">Admin</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink='/imagenes'>Imagenes</a>
+            <a class="nav-link" (click)="mostrarBotonesImagenes()" [routerLink]="['/imagenes', botonesImg]">Imagenes</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Juegos con imagenes
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink='/imagenes/diferencias'>Diferencias</a></li>
-              <li><a class="dropdown-item" routerLink='/imagenes/peliculas'>Peliculas</a></li>
+              <li><a class="dropdown-item" (click)="ocultarBotonesImagenes()" [routerLink]="['/imagenes/diferencias', botonesImg]">Diferencias</a></li>
+              <li><a class="dropdown-item" (click)="ocultarBotonesImagenes()" [routerLink]="['/imagenes/peliculas', botonesImg]">Peliculas</a></li>
             </ul>
           </li>
         </ul>

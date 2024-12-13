@@ -16,9 +16,9 @@ const routes: Routes = [
   {path: 'adivinarnumero', component: AdivinarnumeroComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'contador', component: ContadorComponent},
-  {path: 'imagenes', component: ImagenesComponent, children:[
-    {path: 'diferencias', component: DiferenciasComponent},
-    {path: 'peliculas', component: PeliculasComponent}
+  {path: 'imagenes/:botonesImg', component: ImagenesComponent, children:[
+    {path: 'diferencias/:botonesImg', component: DiferenciasComponent},
+    {path: 'peliculas/:botonesImg', component: PeliculasComponent}
     ]
   },
   {path:'**', pathMatch:'full', redirectTo:'home'}
