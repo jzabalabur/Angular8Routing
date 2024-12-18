@@ -1,1 +1,6 @@
-<p>diferencias works!</p>
+<div class="diferencias">
+<h1>DIFERENCIAS</h1>
+<button (click)="verSolucion()" *ngIf="botonSolucion">Ver solucion</button>
+<button (click)="ocultarSolucion()" *ngIf="botonAtras">Ocultar solucion</button>
+<img [src]="imagePath"  width="100%">
+</div>

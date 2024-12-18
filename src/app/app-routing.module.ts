@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'adivinarnumero', component: AdivinarnumeroComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'contador', component: ContadorComponent},
-  {path: 'imagenes/:botonesImg', component: ImagenesComponent, children:[
+  {path: 'imagenes', component: ImagenesComponent, children:[
     {path: 'diferencias', component: DiferenciasComponent},
     {path: 'peliculas', component: PeliculasComponent}
     ]

@@ -1,3 +1,4 @@
+import { BotonesService } from './botones.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
@@ -8,8 +9,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'ejercicio8routing';
   admin:boolean=false;
-  botonesImg:boolean=false;
-  constructor(private router: Router){}
+  constructor(private router: Router, public botonesService:BotonesService){
+  }
 
   accesoAdmin(){
     this.admin=confirm("¿Eres administrador?");
@@ -19,10 +20,19 @@ export class AppComponent {
       this.router.navigate(['home']);
     }
   }
-  ocultarBotonesImagenes(){
-    this.botonesImg=false;
+  imagenes(){
+    this.botonesService.setbotonesImg(true);
+    this.router.navigate(['imagenes']);
+
   }
-  mostrarBotonesImagenes(){
-    this.botonesImg=true;
+  diferencias(){
+    this.botonesService.setbotonesImg(false);
+    this.router.navigate(['imagenes/diferencias']);
+
+  }
+  peliculas(){
+    this.botonesService.setbotonesImg(false);
+    this.router.navigate(['imagenes/peliculas']);
+
   }
 }

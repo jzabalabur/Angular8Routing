@@ -1,8 +1,7 @@
-<div class="imagenes" *ngIf="botonesImg">
+<div class="imagenes" *ngIf="botonesService.botonesImg">
   <h1>IMAGENES</h1>
   <p>Elige una de las opciones.</p>
   <button (click)="verDiferencias()">Diferencias</button>
   <button (click)="verPeliculas()">Peliculas</button>
 </div>
-<app-diferencias *ngIf="diferencias"></app-diferencias>
-<app-peliculas *ngIf="peliculas"></app-peliculas>
+<router-outlet></router-outlet>

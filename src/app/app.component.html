@@ -24,15 +24,15 @@
             <a class="nav-link" (click)="accesoAdmin()">Admin</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="mostrarBotonesImagenes()" [routerLink]="['/imagenes', botonesImg]">Imagenes</a>
+            <a class="nav-link" (click)="imagenes()">Imagenes</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Juegos con imagenes
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" (click)="ocultarBotonesImagenes()" routerLink="/imagenes/diferencias">Diferencias</a></li>
-              <li><a class="dropdown-item" (click)="ocultarBotonesImagenes()" routerLink="/imagenes/peliculas">Peliculas</a></li>
+              <li><a class="dropdown-item" (click)="diferencias()">Diferencias</a></li>
+              <li><a class="dropdown-item" (click)="peliculas()">Peliculas</a></li>
             </ul>
           </li>
         </ul>

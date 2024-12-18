@@ -1,1 +1,6 @@
-<p>peliculas works!</p>
+<div class="peliculas">
+  <h1>PELICULAS</h1>
+  <button (click)="verSolucion()" *ngIf="botonSolucion">Ver solucion</button>
+  <button (click)="ocultarSolucion()" *ngIf="botonAtras">Ocultar solucion</button>
+  <img [src]="imagePath"  height="100%">
+  </div>

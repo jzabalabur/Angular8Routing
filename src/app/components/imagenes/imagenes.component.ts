@@ -1,28 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { BotonesService } from 'src/app/botones.service';
+import { __param } from 'tslib';
 @Component({
   selector: 'app-imagenes',
   templateUrl: './imagenes.component.html',
   styleUrls: ['./imagenes.component.scss']
 })
 export class ImagenesComponent implements OnInit{
-  peliculas:boolean=false;
-  diferencias:boolean=false;
-  botonesImg:boolean=false;
-
-  constructor(private route: ActivatedRoute) { }
+  constructor(private router:Router, public botonesService:BotonesService){}
 
   ngOnInit(): void {
-    console.log(this.route.snapshot.paramMap.get('botonesImg'));
-    // this.botonesImg = this.route.snapshot.paramMap.get('botonesImg');
   }
   verPeliculas(){
-    this.peliculas=true;
-    this.diferencias=false;
+    this.router.navigate(['imagenes/peliculas']);
   }
   verDiferencias(){
-    this.peliculas=false;
-    this.diferencias=true;
+    this.router.navigate(['imagenes/diferencias']);
   }
 }
