@@ -1,1 +1,21 @@
-<p>adivinarnumero works!</p>
+<div id="contenedor">
+  <h1>ADIVINAR NUMERO</h1>
+
+  <div id="generar" *ngIf="adivinar==false">
+    <p>Generaremos un numero aleatorio del 1 al 50, ¿seras capaz de adivinarlo?</p>
+    <button (click)="generarNumero()">Generar numero</button>
+  </div>
+
+  <div class="adivinar" *ngIf="adivinar==true">
+    <p>Numero generado correctamente.</p>
+    <p>¿Cual es el numero?</p>
+    <form>
+      <input type="number" id="numeroI">
+      <input type="submit" (click)="comprobar()" value="Comprobar">
+    </form>
+
+    <table class="tabla">
+
+    </table>
+  </div>
+</div>
